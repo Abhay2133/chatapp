@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In</title>
+    {% load static %} <!-- Load static files -->
+    <link rel="stylesheet" href="{% static 'users/css/styles.css' %}">
+</head>
+<body>
+    <h2>Log In</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Log In</button>
+        <a href="/signup">Create new Account</a>
+    </form>
+</body>
+</html>

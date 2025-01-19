@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="/static/chat/css/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <div id="aside-container">
+      <aside id="sidebar">
+        <h1>Chat App</h1>
+
+        <div id="user-list">
+          <div class="user-handle">
+            <div class="handle-name">User1 Name</div>
+            <div class="last-message">YOU : Who are you ?</div>
+          </div>
+          <div class="user-handle">
+            <div class="handle-name">User1 Name</div>
+            <div class="last-message">YOU : Who are you ?</div>
+          </div>
+        </div>
+      </aside>
+      <div id="sidebar-trigger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <section id="user-chat">
+      <div id="user-name">UserName</div>
+      <div id="chat-log">
+        <div class="message">Hello Sir</div>
+        <div class="message my-message">Whats up ?</div>
+      </div>
+      <div id="input-controls">
+        <input id="chat-message-input" type="text" size="100">
+        <button id="chat-message-submit" type="button" value="Send">Send</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+<script>
+  window.roomName = "{{ room_name|escapejs }}";
+</script>
+<script type="module" src="/static/chat/scripts/main.js"></script>
+
+</html>
